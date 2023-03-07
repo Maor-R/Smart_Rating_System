@@ -1,0 +1,546 @@
+[
+ {
+  "createdAt": 1677748849,
+  "name": "HP Pavilion Laptop 15-eg2041TX",
+  "category": "Laptop",
+  "description": "12th Generation Intel® Core™ i5 processor,Windows 11 Home,15.6\" diagonal FHD display,Intel® Iris® Xᵉ Graphics,512 GB PCIe® NVMe™ M.2 SSD,8 GB DDR4-3200 MHz RAM (1 x 8 GB),1.74 kg",
+  "officialWebsite": "https://www.hp.com/au-en/shop/catalogsearch/result/?q=pavilion+15",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 5,
+  "amountRatings": 20,
+  "amountRatings":51,
+  "rangePrice": [
+   500,
+   600
+  ],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "1"
+ },
+ {
+  "createdAt": 1677748789,
+  "name": "name 2",
+  "category": "Laptop",
+  "description": "description 2",
+  "officialWebsite": "officialWebsite 2",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 4.5,
+  "amountRatings": 30,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "2"
+ },
+ {
+  "createdAt": 1677748729,
+  "name": "name 3",
+  "category": "Laptop",
+  "description": "description 3",
+  "officialWebsite": "officialWebsite 3",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 4,
+  "amountRatings": 200,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "3"
+ },
+ {
+  "createdAt": 1677748669,
+  "name": "name 4",
+  "category": "Laptop",
+  "description": "description 4",
+  "officialWebsite": "officialWebsite 4",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 3.5,
+  "amountRatings": 10,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "4"
+ },
+ {
+  "createdAt": 1677748609,
+  "name": "name 5",
+  "category": "Laptop",
+  "description": "description 5",
+  "officialWebsite": "officialWebsite 5",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 3,
+  "amountRatings": 15,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "5"
+ },
+ {
+  "createdAt": 1677748549,
+  "name": "name 6",
+  "category": "Laptop",
+  "description": "description 6",
+  "officialWebsite": "officialWebsite 6",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 2.5,
+  "amountRatings": 2,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "6"
+ },
+ {
+  "createdAt": 1677748489,
+  "name": "name 7",
+  "category": "Laptop",
+  "description": "description 7",
+  "officialWebsite": "officialWebsite 7",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 2,
+  "amountRatings": 20,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "7"
+ },
+ {
+  "createdAt": 1677748429,
+  "name": "name 8",
+  "category": "Laptop",
+  "description": "description 8",
+  "officialWebsite": "officialWebsite 8",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 1.5,
+  "amountRatings": 124,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "8"
+ },
+ {
+  "createdAt": 1677748369,
+  "name": "name 9",
+  "category": "Laptop",
+  "description": "description 9",
+  "officialWebsite": "officialWebsite 9",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 1,
+  "amountRatings": 13,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "9"
+ },
+ {
+  "createdAt": 1677748309,
+  "name": "name 10",
+  "category": "Laptop",
+  "description": "description 10",
+  "officialWebsite": "officialWebsite 10",
+  "ratings": {
+   "CPU": {
+    "rating": 2,
+    "amount": 10
+   },
+   "GPU": {
+    "rating": 3,
+    "amount": 5
+   },
+   "RAM": {
+    "rating": 2,
+    "amount": 8
+   },
+   "SSD": {
+    "rating": 4,
+    "amount": 3
+   },
+   "Battery": {
+    "rating": 5,
+    "amount": 10
+   },
+   "Camera": {
+    "rating": 3,
+    "amount": 8
+   },
+   "Display": {
+    "rating": 4,
+    "amount": 6
+   },
+   "Portability": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Build Quality": {
+    "rating": 2,
+    "amount": 10
+   },
+   "Value for Money": {
+    "rating": 3,
+    "amount": 10
+   }
+  },
+  "finalRating": 0.5,
+  "amountRatings": 1,
+  "rangePrice": [],
+  "imageUrl": "https://au-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/1/712V4PA-1_T1666655675.png",
+  "id": "10"
+ }
+]
