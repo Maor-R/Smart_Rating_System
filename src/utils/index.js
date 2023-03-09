@@ -1,5 +1,4 @@
 const drawStars = (ratings, amountRatings) => {
-    
   let stars = [];
   let diff = 5 - ratings;
   let i = ratings;
@@ -14,11 +13,15 @@ const drawStars = (ratings, amountRatings) => {
     stars.push(<span class="star"></span>);
     diff--;
   }
-
-  stars.push(<p>{amountRatings} ratings</p>);
-
+  if (amountRatings > 0) {
+    stars.push(<p>{amountRatings} ratings</p>);
+  }
 
   return stars;
 };
 
-export default drawStars;
+const getUniqueId =()=>{
+  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+export  {drawStars, getUniqueId};

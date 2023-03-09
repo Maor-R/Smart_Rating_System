@@ -1,7 +1,8 @@
-import {Products} from '../components';
+import { Products } from "../components";
 const Search = () => (
   <>
-    <Products/>
+    <h2 className="text-center p-b m-1">Search product</h2>
+    <Products />
   </>
 );
 

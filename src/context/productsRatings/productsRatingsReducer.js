@@ -11,6 +11,12 @@ export default (state, action) => {
         products: payload,
         loading: false
       };
+      case PRODUCTS_RATINGS_ACTIONS.GET_PRODUCTS_FILTER:
+        return {
+          ...state,
+          productsFilter: payload,
+          loading: false
+        };
       case PRODUCTS_RATINGS_ACTIONS.GET_PRODUCT:
       return {
         ...state,
@@ -23,12 +29,17 @@ export default (state, action) => {
         ...state,
         loading: true
       };
-    case PRODUCTS_RATINGS_ACTIONS.CLEAR_PRODUCTS:
+    case PRODUCTS_RATINGS_ACTIONS.CLEAR_PRODUCTS_FILTER:
       return {
         ...state,
-        products: [],
+        productsFilter: [],
         loading: false,
       };
+    case PRODUCTS_RATINGS_ACTIONS.GET_TOP_RATED_PRODUCT:
+    return {  ...state,
+      topRatedProducts: payload,
+      loading: false,
+    };
     default:
       return state;
   }

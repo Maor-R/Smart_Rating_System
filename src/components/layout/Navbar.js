@@ -4,7 +4,7 @@ import { useProductsRatingsContext } from "../../context/productsRatings/Product
 
 const Navbar = () => {
   const {
-    products
+    productsFilter
   } = useProductsRatingsContext();
   return (
     <nav className="navbar bg-dark">
@@ -22,7 +22,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to='/search_product'
-              className={ (({ isActive }) => (isActive ? 'link active' : products? 'link disabled':'link'))  }
+              className={ (({ isActive }) => (productsFilter.length===0 ? 'link disabled' : isActive? 'link active':'link'))  }
             >
               Search Product
             </NavLink>

@@ -3,13 +3,13 @@ import { useProductsRatingsContext } from '../../context/productsRatings/Product
 import { Spinner, ProductItem } from '..';
 
 const Products = () => {
-  const { loading, products } = useProductsRatingsContext();
+  const { loading, productsFilter } = useProductsRatingsContext();
   if (loading) {
     return <Spinner />;
   } else {
     return (
       <div className='grid-3'>
-        {products.map(product => (
+        {productsFilter.map(product => (
           < ProductItem key={product.id} product={product} />
         ))}
       </div>

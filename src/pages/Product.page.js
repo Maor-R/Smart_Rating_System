@@ -1,47 +1,67 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { api } from "../api/api";
 
 import { Spinner, Ratings } from "../components";
 import { useProductsRatingsContext } from "../context/productsRatings/ProductsRatingsContext";
-import drawStars from "../utils";
+import {drawStars} from "../utils";
 
 const Product = () => {
   const {
     getProduct,
+    getProducts,
     product,
-    loading,
+   loading,
   } = useProductsRatingsContext();
 
   const { id } = useParams();
+  // const [product, setProduct] = useState({});
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+//   useEffect(() => {
+    
+//     let res;
+//     const getProductById  = async() =>
+//     {    
+//   try
+// {
+//    res = await api.get(`/products/${id}`);
+//    setProduct(res.data)
+//    console.log(res.data)
+
+// }
+// catch(error){
+//   console.error(error);
+// }
+// finally{
+//   setLoading(false);
+// }
+// }
+// getProductById();
+//   }, [id]);
+
+const {
+  name,
+  description,
+  officialWebsite,
+  ratings,
+  finalRating,
+  amountRatings,
+  price,
+  imageUrl,
+} = product;
+
+  useEffect(() => {     
     getProduct(id);
-  }, []);
 
-  const {
-    name,
-    description,
-    officialWebsite,
-    ratings,
-    finalRating,
-    amountRatings,
-    rangePrice,
-    imageUrl,
-  } = product;
+  }, []);
 
 
   if (loading) return <Spinner />;
 
   return (
     <>
-      <Link
-        to="/search_product"
-        className="btn btn-dark"
-        style={{ marginLeft: "2rem" }}
-      >
-        Back to result
-      </Link>
       <div className="m-2">
         <div className="card grid-2">
           <div className="all-center">
@@ -52,15 +72,15 @@ const Product = () => {
             <img src={imageUrl} className="full-img" alt={`product-${name}`} />
             {description !== undefined && (
               <ul className="p-1 text-left" style={{ listStyleType: "square" }}>
-                {description.split(",").map((item) => (
+                {description.split("\n").map((item) => (
                   <li>
                     <strong>{item}</strong>
                   </li>
                 ))}
               </ul>
             )}
-            {rangePrice !== undefined && (
-              <h3 className="text-center">{`$${rangePrice[0]} - $${rangePrice[1]}`}</h3>
+            {price !== undefined && (
+              <h3 className="text-center">{`$${price}`}</h3>
             )}{" "}
           </div>
 

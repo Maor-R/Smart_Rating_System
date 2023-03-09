@@ -1,10 +1,10 @@
-import {Products} from '../components';
+import {TopRatedProducts} from '../components';
 const Home = () => (
   <>
-  <h1 className='text-center m-3'>
-    Welcome to Smart Rating System
-  </h1>
-    <Products />
+  <h2 className='text-center m-1'>
+  Top rated products
+  </h2>
+    <TopRatedProducts />
   </>
 );
 
