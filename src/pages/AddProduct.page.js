@@ -50,7 +50,7 @@ function AddProduct() {
             >
 
             <option value='' >Select Category</option>
-              <option value="Laptops">Laptop</option>
+              <option value="Laptops">Laptops</option>
               <option value="Routers">Routers</option>
               <option value="Printers">Printers</option>
             </select>

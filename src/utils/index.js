@@ -3,14 +3,14 @@ const drawStars = (ratings, amountRatings) => {
   let diff = 5 - ratings;
   let i = ratings;
   while (i >= 1) {
-    stars.push(<span class="star on"></span>);
+    stars.push(<span className="star on"></span>);
     i--;
   }
   if (i > 0) {
-    stars.push(<span class="star half"></span>);
+    stars.push(<span className="star half"></span>);
   }
   while (diff >= 1) {
-    stars.push(<span class="star"></span>);
+    stars.push(<span className="star"></span>);
     diff--;
   }
   if (amountRatings > 0) {

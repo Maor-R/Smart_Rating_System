@@ -1,62 +1,64 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { api } from "../api/api";
 
-import { Spinner, Ratings } from "../components";
+import { Link, useParams, useNavigate } from "react-router-dom";
+
+import { MdDeleteOutline } from "react-icons/md";
+import { VscEdit } from "react-icons/vsc";
+import { BiMessageSquareAdd } from "react-icons/bi";
+
+import {
+  Spinner,
+  Ratings,
+  ConfirmAlert,
+  EditRatings,
+  AddRating,
+} from "../components";
 import { useProductsRatingsContext } from "../context/productsRatings/ProductsRatingsContext";
-import {drawStars} from "../utils";
+import { drawStars } from "../utils";
 
 const Product = () => {
-  const {
-    getProduct,
-    getProducts,
-    product,
-   loading,
-  } = useProductsRatingsContext();
+  const navigate = useNavigate();
+  const { getProduct, deleteProduct, product, loading } =
+    useProductsRatingsContext();
+  const [choseDelete, setChoseDelete] = useState(false);
+  const [choseEdit, setChoseEdit] = useState(false);
+  const [choseAdd, setChoseAdd] = useState(false);
 
   const { id } = useParams();
-  // const [product, setProduct] = useState({});
-  // const [loading, setLoading] = useState(true);
 
-//   useEffect(() => {
-    
-//     let res;
-//     const getProductById  = async() =>
-//     {    
-//   try
-// {
-//    res = await api.get(`/products/${id}`);
-//    setProduct(res.data)
-//    console.log(res.data)
+  const {
+    name,
+    description,
+    officialWebsite,
+    ratings,
+    finalRating,
+    amountRatings,
+    price,
+    imageUrl,
+  } = product;
 
-// }
-// catch(error){
-//   console.error(error);
-// }
-// finally{
-//   setLoading(false);
-// }
-// }
-// getProductById();
-//   }, [id]);
-
-const {
-  name,
-  description,
-  officialWebsite,
-  ratings,
-  finalRating,
-  amountRatings,
-  price,
-  imageUrl,
-} = product;
-
-  useEffect(() => {     
+  useEffect(() => {
     getProduct(id);
-
   }, []);
 
+  useEffect(() => {
+    // getProduct(id);
+    console.log(product)
+  }, [product]);
+
+  // useEffect(() => {
+  //   if(product)
+  //   alert(Object.keys(product).length)
+  //   // getProduct(id);
+  // }, [ratings]);
+
+  const handleDeleteProduct = () => {
+    deleteProduct(id);
+    setTimeout(() => {
+      navigate("/");
+    }, 500);
+  };
 
   if (loading) return <Spinner />;
 
@@ -64,37 +66,94 @@ const {
     <>
       <div className="m-2">
         <div className="card grid-2">
-          <div className="all-center">
-            <h2>{name}</h2>
-            <div title={`${finalRating} out 5`} className="p">
-              {drawStars(finalRating, amountRatings)}
+          <div>
+            <div
+              title="delete product"
+              onClick={() => {
+                setChoseDelete(true);
+              }}
+            >
+              <div>
+                <MdDeleteOutline className="scale m-b" />
+              </div>
+              {choseDelete && (
+                <ConfirmAlert
+                  handleDeleteProduct={handleDeleteProduct}
+                  setChoseDelete={setChoseDelete}
+                />
+              )}
             </div>
-            <img src={imageUrl} className="full-img" alt={`product-${name}`} />
-            {description !== undefined && (
-              <ul className="p-1 text-left" style={{ listStyleType: "square" }}>
-                {description.split("\n").map((item) => (
-                  <li>
-                    <strong>{item}</strong>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {price !== undefined && (
-              <h3 className="text-center">{`$${price}`}</h3>
-            )}{" "}
+
+            <div className="all-center">
+              <h2>{name} </h2>
+              <div
+                title={`${Number(finalRating).toFixed(2)} out 5`}
+                className="p"
+              >
+                {drawStars(finalRating, amountRatings)}
+              </div>
+              <img
+                src={imageUrl}
+                className="full-img"
+                alt={`product-${name}`}
+              />
+              {description !== undefined && (
+                <ul
+                  className="p-1 text-left"
+                  style={{ listStyleType: "square" }}
+                >
+                  {description.split("\n").map((item) => (
+                    <li>
+                      <strong>{item}</strong>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {price !== undefined && (
+                <h3 className="text-center">{`$${price}`}</h3>
+              )}{" "}
+            </div>
           </div>
 
-          <div className="all-center text-left">
-            {ratings !== undefined && <Ratings ratings={ratings} />}
+          <div>
+            <div className="text-left">
+              <VscEdit
+                className="m-b scale "
+                title="Write a rating"
+                onClick={() => {
+                  if (choseAdd === false) {
+                    setChoseEdit((prev) => !prev);
+                  }
+                }}
+              />
+              <BiMessageSquareAdd
+                className="m-b scale m-l"
+                title="Add a new attribute"
+                onClick={() => {
+                  if (choseEdit === false) {
+                    setChoseAdd((prev) => !prev);
+                  }
+                }}
+              />
+            </div>
+            <div className="all-center">
+              {!choseEdit && !choseAdd && ratings !== undefined && (
+                <Ratings ratings={ratings} />
+              )}
+              {choseEdit && !choseAdd && <EditRatings categories={ratings} />}
+              {choseAdd && !choseEdit && <AddRating />}
 
-            <a
-              href={officialWebsite}
-              className="btn btn-dark  m-3"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit official website
-            </a>
+              {!choseAdd && !choseEdit && (
+                <a
+                  href={officialWebsite}
+                  className="btn btn-dark  m-3"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit official website
+                </a>
+              )}
+            </div>
           </div>
         </div>
         {/* <div className="card text-center">

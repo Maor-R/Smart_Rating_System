@@ -9,114 +9,114 @@ export const MAX_TOP_RATED = 3;
 export const DEFAULT_TIME_WAITING = 1.2;
 
 export const LAPTOP_CATEGORY = {
-    CPU: {
-      rating: null,
-      amount: null,
-    },
-    GPU: {
-      rating: null,
-      amount: null,
-    },
-    RAM: {
-      rating: null,
-      amount: null,
-    },
-    SSD: {
-      rating: null,
-      amount: null,
-    },
-    Battery: {
-      rating: null,
-      amount: null,
-    },
-    Camera: {
-      rating: null,
-      amount: null,
-    },
-    Display: {
-      rating: null,
-      amount: null,
-    },
-    Portability: {
-      rating: null,
-      amount: null,
-    },
-    "Build Quality": {
-      rating: null,
-      amount: null,
-    },
-    "Value for Money": {
-      rating: null,
-      amount: null,
-    },
+  "CPU": {
+    "rating": null,
+    "amount": null
+  },
+  "GPU": {
+    "rating": null,
+    "amount": null
+  },
+  "RAM": {
+    "rating": null,
+    "amount": null
+  },
+  "SSD": {
+    "rating": null,
+    "amount": null
+  },
+  "Battery": {
+    "rating": null,
+    "amount": null
+  },
+  "Camera": {
+    "rating": null,
+    "amount": null
+  },
+  "Display": {
+    "rating": null,
+    "amount": null
+  },
+  "Portability": {
+    "rating": null,
+    "amount": null
+  },
+  "Build Quality": {
+    "rating": null,
+    "amount": null
+  },
+  "Value for Money": {
+    "rating": null,
+    "amount": null
   }
+}
 
   export const ROUTERS_CATEGORY = {
     "Wi-Fi Range": {
-     "rating": 8,
-     "amount": 30
+     "rating": null,
+     "amount": null
     },
     "Ease of Setup": {
-     "rating": 5,
-     "amount": 25
+     "rating": null,
+     "amount": null
     },
     "Product Lifetime": {
-     "rating": 7,
-     "amount": 20
+     "rating": null,
+     "amount": null
     },
     "Packet Loss": {
-     "rating": 3,
-     "amount": 30
+     "rating": null,
+     "amount": null
     },
     "Performence": {
-     "rating": 8,
-     "amount": 28
+     "rating": null,
+     "amount": null
     },
     "Build Quality": {
-     "rating": 8,
-     "amount": 30
+     "rating": null,
+     "amount": null
     },
     "Value for Money": {
-     "rating": 7,
-     "amount": 29
+     "rating": null,
+     "amount": null
     }
    }
 
   export const PRINTERS_CATEGORY = {
     "Printing Speed": {
-     "rating": 6,
-     "amount": 30
+     "rating": null,
+     "amount": null
     },
     "Ink Cartridge Longevity": {
-     "rating": 7,
-     "amount": 25
+     "rating": null,
+     "amount": null
     },
     "Reliability": {
-     "rating": 6,
-     "amount": 20
+     "rating": null,
+     "amount": null
     },
     "Cleaning & Maintenance": {
-     "rating": 5,
-     "amount": 10
+     "rating": null,
+     "amount": null
     },
     "Printing Quality": {
-     "rating": 4,
-     "amount": 8
+     "rating": null,
+     "amount": null
     },
     "Noise": {
-     "rating": 3,
-     "amount": 6
+     "rating": null,
+     "amount": null
     },
     "Ease of Use": {
-     "rating": 2,
-     "amount": 12
+     "rating": null,
+     "amount": null
     },
     "Build Quality": {
-     "rating": 2,
-     "amount": 30
+     "rating": null,
+     "amount": null
     },
     "Value for Money": {
-     "rating": 3,
-     "amount": 10
+     "rating": null,
+     "amount": null
     }
    }

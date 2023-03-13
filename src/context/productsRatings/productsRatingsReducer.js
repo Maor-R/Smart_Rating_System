@@ -11,6 +11,11 @@ export default (state, action) => {
         products: payload,
         loading: false
       };
+      case PRODUCTS_RATINGS_ACTIONS.UPDATE_RATING_PRODUCT:
+        return {
+          ...state,
+          loading: false
+        };
       case PRODUCTS_RATINGS_ACTIONS.GET_PRODUCTS_FILTER:
         return {
           ...state,
@@ -24,11 +29,22 @@ export default (state, action) => {
         loading: false
       };
 
+      case PRODUCTS_RATINGS_ACTIONS.DELETE_PRODUCT:
+        return {
+          ...state,
+          // topRatedProducts: payload,
+          loading: false
+        };
     case PRODUCTS_RATINGS_ACTIONS.SET_LOADING:
       return {
         ...state,
         loading: true
       };
+      case PRODUCTS_RATINGS_ACTIONS.STOP_LOADING:
+        return {
+          ...state,
+          loading: false
+        };
     case PRODUCTS_RATINGS_ACTIONS.CLEAR_PRODUCTS_FILTER:
       return {
         ...state,

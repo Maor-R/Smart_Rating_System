@@ -44,8 +44,8 @@ const useAddProduct = () => {
     const addProduct = async () => {
       try {
         await api.post("/products", formData);
-        getProducts();
-        getProduct()
+        // getProducts("all");
+        // getProduct()
 
       } catch (error) {
         console.error(error);
@@ -127,17 +127,31 @@ const useAddProduct = () => {
     handleBlur: handlePriceBlur,
   } = useInput("Please enter a price", setError);
 
-  const setFormDataAccordingCategory =()=> {
+  const setFormDataAccordingCategory =async()=> {
+    const resCategories = await api.get('/categories/');
     let selectCategory = null ;
-    if(category === 'Laptops'){
-      selectCategory = LAPTOP_CATEGORY;
-    }
-    else if(category === 'Routers'){
-      selectCategory = ROUTERS_CATEGORY;
-    }
-    else if(category === 'Printers'){
-      selectCategory = PRINTERS_CATEGORY;
-    }
+
+    resCategories.data.forEach((c)=> {
+      for (const c of  resCategories.data){
+console.log(c.name === category, c.name, category)
+        if (c.name === category)
+        {selectCategory = c.attributes;
+          break;
+        }
+      }
+
+    })
+
+    console.log(selectCategory)
+    // if(category === 'Laptops'){
+    //   selectCategory = LAPTOP_CATEGORY;
+    // }
+    // else if(category === 'Routers'){
+    //   selectCategory = ROUTERS_CATEGORY;
+    // }
+    // else if(category === 'Printers'){
+    //   selectCategory = PRINTERS_CATEGORY;
+    // }
 
     setFormData({
       ...formData,

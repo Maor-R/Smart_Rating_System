@@ -43,7 +43,9 @@ const useInput = (message, setIsError, validationFn = null) => {
     setValue,
     error,
     handleChange,
-    handleBlur
+    handleBlur,
+    setError//
+
   };
 };
 

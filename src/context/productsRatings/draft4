@@ -7,43 +7,43 @@
      "officialWebsite": "https://www.hp.com/au-en/shop/catalogsearch/result/?q=pavilion+15",
      "ratings": {
       "CPU": {
-       "rating": 8,
+       "rating": 4,
        "amount": 10
       },
       "GPU": {
-       "rating": 6,
+       "rating": 3,
        "amount": 5
       },
       "RAM": {
-       "rating": 8,
+       "rating": 4,
        "amount": 8
       },
       "SSD": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 8
       },
       "Battery": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 10
       },
       "Camera": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 8
       },
       "Display": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 6
       },
       "Portability": {
-       "rating": 8,
+       "rating": 4,
        "amount": 10
       },
       "Build Quality": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 10
       },
       "Value for Money": {
-       "rating": 8,
+       "rating": 4,
        "amount": 10
       }
      },
@@ -61,43 +61,43 @@
      "officialWebsite": "https://www.hp.com/au-en/shop/hp-pavilion-laptop-15-eg2055tx-737c7pa.html",
      "ratings": {
       "CPU": {
-       "rating": 7,
+       "rating": 4,
        "amount": 11
       },
       "GPU": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 7
       },
       "RAM": {
-       "rating": 8,
+       "rating": 4,
        "amount": 8
       },
       "SSD": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 8
       },
       "Battery": {
-       "rating": 8,
+       "rating": 4,
        "amount": 9
       },
       "Camera": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 8
       },
       "Display": {
-       "rating": 8,
+       "rating": 4,
        "amount": 4
       },
       "Portability": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 10
       },
       "Build Quality": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 10
       },
       "Value for Money": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 15
       }
      },
@@ -115,39 +115,39 @@
      "officialWebsite": "https://www.canon.com.au/printers/pixma-ip8760",
      "ratings": {
       "Printing Speed": {
-       "rating": 6,
+       "rating": 3,
        "amount": 30
       },
       "Ink Cartridge Longevity": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 25
       },
       "Reliability": {
-       "rating": 8,
+       "rating": 4,
        "amount": 20
       },
       "Cleaning & Maintenance": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 10
       },
       "Printing Quality": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 8
       },
       "Noise": {
-       "rating": 6,
+       "rating": 3,
        "amount": 6
       },
       "Ease of Use": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 12
       },
       "Build Quality": {
-       "rating": 5,
+       "rating": 2.5,
        "amount": 30
       },
       "Value for Money": {
-       "rating": 5,
+       "rating": 2.5,
        "amount": 10
       }
      },
@@ -165,39 +165,39 @@
      "officialWebsite": "https://www.epson.com.au/products/ecotank/ET-4750.asp",
      "ratings": {
       "Printing Speed": {
-       "rating": 6,
+       "rating": 3,
        "amount": 30
       },
       "Ink Cartridge Longevity": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 25
       },
       "Reliability": {
-       "rating": 6,
+       "rating": 3,
        "amount": 20
       },
       "Cleaning & Maintenance": {
-       "rating": 5,
+       "rating": 2.5,
        "amount": 10
       },
       "Printing Quality": {
-       "rating": 4,
+       "rating": 2,
        "amount": 8
       },
       "Noise": {
-       "rating": 3,
+       "rating": 1.5,
        "amount": 6
       },
       "Ease of Use": {
-       "rating": 2,
+       "rating": 1,
        "amount": 12
       },
       "Build Quality": {
-       "rating": 2,
+       "rating": 1,
        "amount": 30
       },
       "Value for Money": {
-       "rating": 3,
+       "rating": 1.5,
        "amount": 10
       }
      },
@@ -215,31 +215,31 @@
      "officialWebsite": "https://www.asus.com/au/networking-iot-servers/modem-routers/all-series/dslac68u/",
      "ratings": {
       "Wi-Fi Range": {
-       "rating": 8,
+       "rating": 4,
        "amount": 30
       },
       "Ease of Setup": {
-       "rating": 5,
+       "rating": 2.5,
        "amount": 25
       },
       "Product Lifetime": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 20
       },
       "Packet Loss": {
-       "rating": 3,
+       "rating": 1.5,
        "amount": 30
       },
       "Performence": {
-       "rating": 8,
+       "rating": 4,
        "amount": 28
       },
       "Build Quality": {
-       "rating": 8,
+       "rating": 4,
        "amount": 30
       },
       "Value for Money": {
-       "rating": 7,
+       "rating": 3.5,
        "amount": 29
       }
      },
@@ -257,31 +257,31 @@
      "officialWebsite": "https://www.asus.com/networking-iot-servers/wifi-routers/asus-wifi-routers/rtac68u/",
      "ratings": {
       "Wi-Fi Range": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 80
       },
       "Ease of Setup": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 80
       },
       "Product Lifetime": {
-       "rating": 8,
+       "rating": 4,
        "amount": 20
       },
       "Packet Loss": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 90
       },
       "Performence": {
-       "rating": 10,
+       "rating": 5,
        "amount": 70
       },
       "Build Quality": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 65
       },
       "Value for Money": {
-       "rating": 9,
+       "rating": 4.5,
        "amount": 60
       }
      },

@@ -22,7 +22,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to='/search_product'
-              className={ (({ isActive }) => (productsFilter.length===0 ? 'link disabled' : isActive? 'link active':'link'))  }
+              className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Search Product
             </NavLink>
