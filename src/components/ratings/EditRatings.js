@@ -1,9 +1,13 @@
 import { React, useState } from "react";
 import { useProductsRatingsContext } from "../../context/productsRatings/ProductsRatingsContext";
+import { useAlertGlobalContext } from "../../context/alert/AlertContext";
+
+import { SUCCESS_ADD_RATING_MSG, SUCCESS_TIME_ALERT } from "../../constants";
 
 import EditRatingItem from "./EditRatingItem";
 
-function EditRatings({ categories }) {
+function EditRatings({ categories, setChoseEdit }) {
+  const { setAlert } = useAlertGlobalContext();
 
   const [inputValue, setInputValue] = useState({});
   const [disableBtnSubmit, setDisableBtnSubmit] = useState(true);
@@ -11,32 +15,27 @@ function EditRatings({ categories }) {
   const { product, updateRatingProduct } = useProductsRatingsContext();
 
   const onChangeInput = (value) => {
-
-    
-
     const currValue = Number(Object.entries(value)[0][1]);
     const currName = Object.entries(value)[0][0];
-    console.log(currName,currValue)
+    console.log(currName, currValue);
 
-    if(inputValue === {} && currValue===0){
-      setDisableBtnSubmit(true)
-    }
-    else if (currValue!==0){
-      setDisableBtnSubmit(false)
-    }
-    else if(inputValue !=={} && currValue ===0){
-      const emptyRating =  Object.entries(inputValue).every((rating) => (Number(rating[1])===0 || (rating[0]===currName) ))
+    if (inputValue === {} && currValue === 0) {
+      setDisableBtnSubmit(true);
+    } else if (currValue !== 0) {
+      setDisableBtnSubmit(false);
+    } else if (inputValue !== {} && currValue === 0) {
+      const emptyRating = Object.entries(inputValue).every(
+        (rating) => Number(rating[1]) === 0 || rating[0] === currName
+      );
       console.log(emptyRating);
-      console.log(inputValue)
-      if(emptyRating){
-        setDisableBtnSubmit(true)
-    }
-    else{
-      setDisableBtnSubmit(false)
-    }
+      console.log(inputValue);
+      if (emptyRating) {
+        setDisableBtnSubmit(true);
+      } else {
+        setDisableBtnSubmit(false);
+      }
     }
 
-    // console.log( Object.entries(value)[0][1])
     setInputValue({ ...inputValue, ...value });
   };
 
@@ -71,6 +70,11 @@ function EditRatings({ categories }) {
     updatedProduct["amountRatings"] += 1;
 
     updateRatingProduct(updatedProduct, updatedProduct["id"]);
+
+    setTimeout(() => {
+      setAlert(SUCCESS_ADD_RATING_MSG, "success", SUCCESS_TIME_ALERT);
+      setChoseEdit(false);
+    }, 500);
   };
   return (
     <div>
@@ -84,7 +88,7 @@ function EditRatings({ categories }) {
         ))}
       </div>
       <a
-        className={`btn btn-dark  m-3 ${disableBtnSubmit? 'disabled':''}`}
+        className={`btn btn-dark  m-3 ${disableBtnSubmit ? "disabled" : ""}`}
         target="_blank"
         rel="noreferrer"
         onClick={handleSubmit}

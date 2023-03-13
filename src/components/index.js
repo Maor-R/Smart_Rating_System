@@ -1,5 +1,4 @@
 import Alert from './layout/Alert';
-import Badge from './layout/Badge';
 import Navbar from './layout/Navbar';
 import Spinner from './layout/Spinner';
 import SharedLayout from './layout/SharedLayout';
@@ -22,7 +21,6 @@ import AddRating from './ratings/AddRating';
 
 export {
   Alert,
-  Badge,
   Navbar,
   Spinner,
   SharedLayout,

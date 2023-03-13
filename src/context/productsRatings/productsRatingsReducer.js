@@ -32,7 +32,6 @@ export default (state, action) => {
       case PRODUCTS_RATINGS_ACTIONS.DELETE_PRODUCT:
         return {
           ...state,
-          // topRatedProducts: payload,
           loading: false
         };
     case PRODUCTS_RATINGS_ACTIONS.SET_LOADING:

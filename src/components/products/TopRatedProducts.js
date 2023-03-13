@@ -4,7 +4,7 @@ import { useProductsRatingsContext } from "../../context/productsRatings/Product
 import { Spinner, ProductItem } from "..";
 
 const TopRatedProducts = () => {
-  const { loading, topRatedProducts, getTopRatedProducts, getProducts } =
+  const { loading, topRatedProducts, getTopRatedProducts } =
     useProductsRatingsContext();
 
   useEffect(() => {

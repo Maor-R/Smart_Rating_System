@@ -3,9 +3,6 @@ const FormRow = ({ type, name, maxLength, value, placeholder, handleChange, hand
     <>
 
       <div className={`form-row ${error && 'error'}`}>
-        {/* <label htmlFor={name} className='form-label'>
-          {name}
-        </label> */}
         <input
           id={name}
           type={type}

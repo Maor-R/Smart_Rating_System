@@ -11,7 +11,7 @@ function EditRatingItem({ category, onChangeInput }) {
 
 
   return (
-    <div>
+    <div className="grid-2-row ">
       <label htmlFor={category[0]}>{category[0]}</label>
       <input
         type="range"
@@ -20,19 +20,18 @@ function EditRatingItem({ category, onChangeInput }) {
         min="0"
         max="5"
         step="1"
-        list={category[0]+"datalist"}
+        list="datalist"
         value={value}
-        // defaultValue={value}
         onChange={handleChange}
+        style={{width:'100%'}}
 
       />
 
-      <datalist id={category[0]+"datalist"}>
+      <datalist id="datalist">
         <option value="0" label="0"></option>
-        <option value="1"></option>
-        <option value="2"></option>
-        <option value="3"></option>
-        <option value="4"></option>
+        <option value="1" ></option>
+        <option value="2" ></option>
+        <option value="4" ></option>
         <option value="5" label="5"></option>
       </datalist>
     </div>

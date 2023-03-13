@@ -9,19 +9,15 @@ import {
   SUCCESS_ADD_PRODUCT_MSG,
   SUCCESS_TIME_ALERT,
   DEFAULT_TIME_WAITING,
-  LAPTOP_CATEGORY,
-  ROUTERS_CATEGORY,
-  PRINTERS_CATEGORY
 } from "../constants";
 
 const useAddProduct = () => {
   const { setAlert } = useAlertGlobalContext();
-  const { getProducts, getProduct } = useProductsRatingsContext();
 
-  const [isDisabled, setIsDisabled] = useState(false); 
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const [formData, setFormData] = useState({
-    category:"",
+    category: "",
     name: "",
     description: "",
     officialWebsite: "",
@@ -29,14 +25,13 @@ const useAddProduct = () => {
     price: null,
     Rating: null,
     amountRatings: null,
-    finalRating:null,
-    ratings: null
+    finalRating: null,
+    ratings: null,
   });
   const [error, setError] = useState({
     isError: false,
     message: "",
   });
-
 
   useEffect(() => {}, [isDisabled]);
 
@@ -44,9 +39,6 @@ const useAddProduct = () => {
     const addProduct = async () => {
       try {
         await api.post("/products", formData);
-        // getProducts("all");
-        // getProduct()
-
       } catch (error) {
         console.error(error);
         setError({
@@ -57,27 +49,24 @@ const useAddProduct = () => {
       }
       setIsDisabled(true);
 
-
       const intervalId = setTimeout(() => {
         setAlert(SUCCESS_ADD_PRODUCT_MSG, "success", SUCCESS_TIME_ALERT);
         setIsDisabled(false);
-        setValueName('');
-        setValueDescription('');
-        setValueImageUrl('');
-        setValueOfficialWebsite('');
-        setValuePrice('');
-        setValueCategory('');
+        setValueName("");
+        setValueDescription("");
+        setValueImageUrl("");
+        setValueOfficialWebsite("");
+        setValuePrice("");
+        setValueCategory("");
 
         return () => clearInterval(intervalId);
       }, MS_1000 * DEFAULT_TIME_WAITING);
     };
 
-    if (formData.name !== "") 
-    {
+    if (formData.name !== "") {
       addProduct();
     }
   }, [formData]);
-
 
   const {
     value: category,
@@ -127,31 +116,18 @@ const useAddProduct = () => {
     handleBlur: handlePriceBlur,
   } = useInput("Please enter a price", setError);
 
-  const setFormDataAccordingCategory =async()=> {
-    const resCategories = await api.get('/categories/');
-    let selectCategory = null ;
+  const setFormDataAccordingCategory = async () => {
+    const resCategories = await api.get("/categories/");
+    let selectCategory = null;
 
-    resCategories.data.forEach((c)=> {
-      for (const c of  resCategories.data){
-console.log(c.name === category, c.name, category)
-        if (c.name === category)
-        {selectCategory = c.attributes;
+    resCategories.data.forEach((c) => {
+      for (const c of resCategories.data) {
+        if (c.name === category) {
+          selectCategory = c.attributes;
           break;
         }
       }
-
-    })
-
-    console.log(selectCategory)
-    // if(category === 'Laptops'){
-    //   selectCategory = LAPTOP_CATEGORY;
-    // }
-    // else if(category === 'Routers'){
-    //   selectCategory = ROUTERS_CATEGORY;
-    // }
-    // else if(category === 'Printers'){
-    //   selectCategory = PRINTERS_CATEGORY;
-    // }
+    });
 
     setFormData({
       ...formData,
@@ -161,15 +137,21 @@ console.log(c.name === category, c.name, category)
       officialWebsite: officialWebsite,
       imageUrl: imageUrl,
       price: price,
-      ratings: selectCategory
+      ratings: selectCategory,
     });
-  }
+  };
 
   const handleSubmit = async (event) => {
-    
     event.preventDefault();
 
-    if (!category|| !name || !description || !officialWebsite || !imageUrl || !price) {
+    if (
+      !category ||
+      !name ||
+      !description ||
+      !officialWebsite ||
+      !imageUrl ||
+      !price
+    ) {
       setError(true);
       handleNameBlur();
       handleDescriptionBlur();
@@ -178,13 +160,10 @@ console.log(c.name === category, c.name, category)
       handlePriceBlur();
       handleCategoryBlur();
       return;
-
     } else {
-
       setFormDataAccordingCategory();
 
-
-      setTimeout( () => {
+      setTimeout(() => {
         setError(false);
       }, DEFAULT_TIME_WAITING);
     }
@@ -194,7 +173,7 @@ console.log(c.name === category, c.name, category)
     category,
     categoryError,
     handleCategoryChange,
-    handleCategoryBlur, 
+    handleCategoryBlur,
     name,
     nameError,
     handleNameChange,

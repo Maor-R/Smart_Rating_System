@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import { MdDeleteOutline } from "react-icons/md";
 import { VscEdit } from "react-icons/vsc";
@@ -43,15 +43,8 @@ const Product = () => {
   }, []);
 
   useEffect(() => {
-    // getProduct(id);
-    console.log(product)
+    console.log(product);
   }, [product]);
-
-  // useEffect(() => {
-  //   if(product)
-  //   alert(Object.keys(product).length)
-  //   // getProduct(id);
-  // }, [ratings]);
 
   const handleDeleteProduct = () => {
     deleteProduct(id);
@@ -67,15 +60,36 @@ const Product = () => {
       <div className="m-2">
         <div className="card grid-2">
           <div>
-            <div
-              title="delete product"
-              onClick={() => {
-                setChoseDelete(true);
-              }}
-            >
-              <div>
-                <MdDeleteOutline className="scale m-b" />
-              </div>
+            <div>
+                <div className="">
+                  <VscEdit
+                    className={choseEdit? 'm-b scale select-btn':'m-b scale'}
+                    title="Write a rating"
+                    onClick={() => {
+                      if (choseAdd === false) {
+                        setChoseEdit((prev) => !prev);
+                      }
+                    }}
+                  />
+                  <BiMessageSquareAdd
+                   className={choseAdd? 'm-b scale m-l select-btn':'m-b scale m-l'}
+
+                    title="Add a new attribute"
+                    onClick={() => {
+                      if (choseEdit === false) {
+                        setChoseAdd((prev) => !prev);
+                      }
+                    }}
+                  />
+                  <MdDeleteOutline
+                                     className={choseDelete? 'm-l scale m-b select-btn':'m-l scale m-b'}
+
+                    title="Delete product"
+                    onClick={() => {
+                      setChoseDelete(true);
+                    }}
+                  />
+                </div>
               {choseDelete && (
                 <ConfirmAlert
                   handleDeleteProduct={handleDeleteProduct}
@@ -115,33 +129,19 @@ const Product = () => {
             </div>
           </div>
 
+
+
           <div>
-            <div className="text-left">
-              <VscEdit
-                className="m-b scale "
-                title="Write a rating"
-                onClick={() => {
-                  if (choseAdd === false) {
-                    setChoseEdit((prev) => !prev);
-                  }
-                }}
-              />
-              <BiMessageSquareAdd
-                className="m-b scale m-l"
-                title="Add a new attribute"
-                onClick={() => {
-                  if (choseEdit === false) {
-                    setChoseAdd((prev) => !prev);
-                  }
-                }}
-              />
-            </div>
             <div className="all-center">
               {!choseEdit && !choseAdd && ratings !== undefined && (
                 <Ratings ratings={ratings} />
               )}
-              {choseEdit && !choseAdd && <EditRatings categories={ratings} />}
-              {choseAdd && !choseEdit && <AddRating />}
+              {choseEdit && !choseAdd && (
+                <EditRatings categories={ratings} setChoseEdit={setChoseEdit} />
+              )}
+              {choseAdd && !choseEdit && (
+                <AddRating setChoseAdd={setChoseAdd} />
+              )}
 
               {!choseAdd && !choseEdit && (
                 <a
@@ -156,12 +156,6 @@ const Product = () => {
             </div>
           </div>
         </div>
-        {/* <div className="card text-center">
-          {badges.map((badge) => (
-            <Badge key={badge.type} {...badge} />
-          ))}
-        </div> */}
-        {/* <Products products={products} /> */}
       </div>
     </>
   );

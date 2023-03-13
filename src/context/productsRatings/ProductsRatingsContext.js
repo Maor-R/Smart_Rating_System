@@ -128,81 +128,41 @@ const ProductsRatingsProvider = ({ children }) => {
   };
 
   const updateProduct = async (product) => {
-    // setLoading();
     await api.put(`/products/${product.id}`, product);
-    // getTopRatedProducts();
-    // getProduct(id);
-    // dispatch({
-    //   type: PRODUCTS_RATINGS_ACTIONS.UPDATE_RATING_PRODUCT,
-    // });
   };
 
-  const updateAttributeRatingProducts =  async (newAttribute, category,id)=>{
+
+  const updateAttributeRatingProducts = async (newAttribute, category, id) => {
     setLoading();
-    let r ;
-    let res =  await getProducts("all");
-    res.map(async (product)=>{
-      if(product.category === category)
-      {console.log(product.id)
-        product.ratings[newAttribute] =  {
-        "rating": null,
-        "amount": null
-      };
+    let res = await getProducts("all");
+    res.map(async (product) => {
+      if (product.category === category) {
+        product.ratings[newAttribute] = {
+          rating: null,
+          amount: null,
+        };
 
-      const [p] = await Promise.all([
-        updateProduct(product)
-      ]);
-        //  r= updateProduct(product)
-    }
-    // getProductsFilter();
+        await Promise.all([updateProduct(product)]);
+      }
 
-    // let promiseExecution = async () => {
-    //   let promise = await Promise.all([
-    //     r,
-    //     getProduct("1"),
-    //     thirdPromise(),
-    //   ]);
-    //   console.log(promise);
-    // };
-     
-    // // Function call
-    // promiseExecution();
-    await getProduct(id);
+      await getProduct(id);
+    });
 
-// setTimeout(() => {
-//   getProduct("1");
+    const resCategories = await api.get("/categories/");
+    console.log(resCategories.data);
 
-// }, 1000);   
-
-  })
-
-
-  const resCategories = await api.get('/categories/');
-  console.log(resCategories.data)
-  
-
-  resCategories.data.map(async (c)=>{
-    if(c.name === category)
-    {
-      console.log(c.id)
-      c.attributes[newAttribute] =  {
-      "rating": null,
-      "amount": null
-    };
-    await api.put(`/categories/${c.id}`, c);
-
-// setTimeout(() => {
-//   getProduct("1");
-
-// }, 1000);   
-
-}})
-
-
-
+    resCategories.data.map(async (c) => {
+      if (c.name === category) {
+        c.attributes[newAttribute] = {
+          rating: null,
+          amount: null,
+        };
+        await api.put(`/categories/${c.id}`, c);
+      }
+    });
 
     dispatch({ type: PRODUCTS_RATINGS_ACTIONS.STOP_LOADING });
-  }
+  };
   return (
     <ProductsRatingsContext.Provider
       value={{
@@ -218,7 +178,7 @@ const ProductsRatingsProvider = ({ children }) => {
         getProduct,
         deleteProduct,
         updateRatingProduct,
-        updateAttributeRatingProducts
+        updateAttributeRatingProducts,
       }}
     >
       {children}

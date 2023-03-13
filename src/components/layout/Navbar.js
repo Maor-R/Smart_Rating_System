@@ -1,11 +1,8 @@
 import { NavLink, Link } from 'react-router-dom';
 import  Search  from '../products/Search';
-import { useProductsRatingsContext } from "../../context/productsRatings/ProductsRatingsContext";
 
 const Navbar = () => {
-  const {
-    productsFilter
-  } = useProductsRatingsContext();
+
   return (
     <nav className="navbar bg-dark">
       <div className="container">
